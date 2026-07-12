@@ -31,17 +31,29 @@ sudo xbps-install -S bash cliphist fzf wl-clipboard xdg-utils file bat kitty foo
 ```
 git clone https://github.com/rywby-dot/tui-clipboard.git
 cd tui-clipboard
-chmod +x tui_clipboard.sh
+make install
 ```
+**!!! Make sure you have PATH in your shellrc file!**
+
+**Add**
 ```
-chmod +x private-mode/clipboard_script.sh
-chmod +x private-mode/clipboard_switch.sh
+export PATH="$HOME/.local/bin:$PATH"
 ```
-or just download the file
+**to your ~/.zshrc, ~/.bashrc etc.**
+
+Uninstall:
+```
+make uninstall
+```
+
+or just download the file and use it like a script
 
 
 # Usage
-just run the script
+```
+tuicl
+```
+or just run the script
 ```
 ./tui_clipboard.sh
 ```
@@ -52,21 +64,22 @@ just run the script
 
 
 # Usage pt2
+
 Recomended: foot (sixel)
 ```
-foot -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard.sh'
+foot -a tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
 ```
 or using footserver
 ```
 footserver &
-footclient -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard.sh'
+footclient -a tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
 ```
 <img width="480" height="270" alt="ScreenShot-2026-07-12_21-45-16" src="https://github.com/user-attachments/assets/32067a48-db3a-4e43-952a-233cc83f9bb4" />
 
 
 Recomended: kitty (kitty)
 ```
-kitty -1 --class tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_kitty.sh'
+kitty -1 --class tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard_kitty.sh'
 ```
 <img width="480" height="270" alt="ScreenShot-2026-07-12_21-44-44" src="https://github.com/user-attachments/assets/4c088de8-a5ce-43d9-99e0-33c64d7395bc" />
 
