@@ -4,7 +4,7 @@ cliphist list | fzf --no-sort --delimiter '\t' --with-nth 2.. \
     tmp=$(mktemp)
     echo {} | cliphist decode > "$tmp"
     if file -b --mime-type "$tmp" | grep -q "^image/"; then
-        chafa -f sixel -s "$(($FZF_PREVIEW_COLUMNS))x$FZF_PREVIEW_LINES" "$tmp"
+        chafa -f sixels -s "$(($FZF_PREVIEW_COLUMNS))x$FZF_PREVIEW_LINES" "$tmp"
     else
         bat --color=always --style=plain "$tmp"
     fi
