@@ -5,7 +5,7 @@ export KITTY_CLIP_IMAGE_ID=$$
 cliphist list | fzf --no-sort --no-info --delimiter '\t' --with-nth 2.. \
   --preview '
     tmp=$(mktemp)
-    echo {} | cliphist decode > "$tmp"
+    printf "%s" {1} | cliphist decode > "$tmp"
 
     echo -en "\033_Ga=d,d=I,i=${KITTY_CLIP_IMAGE_ID},q=2\033\\"
 
@@ -27,7 +27,9 @@ cliphist list | fzf --no-sort --no-info --delimiter '\t' --with-nth 2.. \
     rm -f "$tmp"
   ' \
   --preview-window=right:50% \
-  --bind 'enter:execute-silent(echo {} | cliphist decode | wl-copy)+abort'
+  --bind 'enter:execute-silent(printf "%s" {1} | cliphist decode | wl-copy)+abort' \
+  --bind 'ctrl-d:execute-silent(printf "%s" {1} | cliphist delete)+reload(cliphist list)' \
+  --bind 'right-click:execute(printf "%s" {1} | cliphist decode | wl-copy)+abort' \
 
 echo -en "\033_Ga=d,d=I,i=${KITTY_CLIP_IMAGE_ID},q=2\033\\" \
   > /dev/tty 2>/dev/null || true
