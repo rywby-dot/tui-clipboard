@@ -29,9 +29,9 @@ sudo xbps-install -S bash cliphist fzf wl-clipboard xdg-utils file bat kitty foo
 ```
 git clone https://github.com/rywby-dot/tui-clipboard.git
 cd tui-clipboard
-chmod +x tui-clipboard/tui_clipboard_sixel.sh
-chmod +x tui-clipboard/tui_clipboard_noimage.sh
-chmod +x tui-clipboard/tui_clipboard_kitty.sh
+chmod +x tui_clipboard_sixel.sh
+chmod +x tui_clipboard_noimage.sh
+chmod +x tui_clipboard_kitty.sh
 ```
 or just download the file
 
