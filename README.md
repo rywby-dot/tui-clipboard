@@ -86,7 +86,7 @@ kitty -1 --class tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard_kit
 
 Not recomended: terminals without image support, for example alacritty. Image will render as ASCII art
 ```
-alacritty --class tui-clipboard -e bash -c '~/tui-clipboard/tui_clipboard.sh'
+alacritty --class tui-clipboard -e bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
 ```
 <img width="480" height="270" alt="ScreenShot-2026-07-12_21-43-07" src="https://github.com/user-attachments/assets/87217b66-648a-49f4-9c9a-d660490f54ed" />
 
