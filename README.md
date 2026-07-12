@@ -42,6 +42,11 @@ just run the script
 ./tui_clipboard_*.sh
 ```
 
+# Private Mode
+
+*In private mode text that you copy is NOT saving in cliphist. So you can copy passwords to example. See here https://github.com/rywby-dot/tui-clipboard/blob/main/private-mode/README_PrivateMode.md*
+
+
 # Image protocol: Sixel
 
 <img width="480" height="270" alt="ScreenShot-2026-07-12_09-21-13" src="https://github.com/user-attachments/assets/668525f2-e69b-49ff-b360-77c38bd74302" />
