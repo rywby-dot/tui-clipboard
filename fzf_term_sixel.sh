@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+cliphist list | fzf --no-sort --delimiter '\t' --with-nth 2.. \
+  --preview '
+    tmp=$(mktemp)
+    echo {} | cliphist decode > "$tmp"
+    if file -b --mime-type "$tmp" | grep -q "^image/"; then
+        chafa -f sixel -s "$(($FZF_PREVIEW_COLUMNS))x$FZF_PREVIEW_LINES" "$tmp"
+    else
+        bat --color=always --style=plain "$tmp"
+    fi
+    rm -f "$tmp"
+  ' \
+  --preview-window=right:55% \
+  --bind 'enter:execute(echo {} | cliphist decode | wl-copy)+abort'
