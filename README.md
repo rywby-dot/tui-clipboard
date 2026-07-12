@@ -1,6 +1,8 @@
 # Fast and simple clipboard manager in terminal
 
-<img width="960" height="540" alt="ScreenShot-2026-07-12_16-17-28" src="https://github.com/user-attachments/assets/2d3701df-cffd-4292-a81f-73178f8fdd44" />
+<img width="960" height="540" alt="ScreenShot-2026-07-12_21-36-19" src="https://github.com/user-attachments/assets/bd4fd718-bd02-4b0e-9428-77ed01696911" />
+
+Works with every terminal. Shows pictures using chafa in kitty, sixel, acsii, iterm etc.
 
 # Dependences
 ```
@@ -29,9 +31,11 @@ sudo xbps-install -S bash cliphist fzf wl-clipboard xdg-utils file bat kitty foo
 ```
 git clone https://github.com/rywby-dot/tui-clipboard.git
 cd tui-clipboard
-chmod +x tui_clipboard_sixel.sh
-chmod +x tui_clipboard_noimage.sh
-chmod +x tui_clipboard_kitty.sh
+chmod +x tui_clipboard.sh
+```
+```
+chmod +x private-mode/clipboard_script.sh
+chmod +x private-mode/clipboard_switch.sh
 ```
 or just download the file
 
@@ -39,7 +43,7 @@ or just download the file
 # Usage
 just run the script
 ```
-./tui_clipboard_*.sh
+./tui_clipboard.sh
 ```
 
 # Private Mode
@@ -47,36 +51,29 @@ just run the script
 *In private mode text that you copy is NOT saving in cliphist. So you can copy passwords to example. See here https://github.com/rywby-dot/tui-clipboard/blob/main/private-mode/README_PrivateMode.md*
 
 
-# Image protocol: Sixel
-
-<img width="480" height="270" alt="ScreenShot-2026-07-12_16-17-16" src="https://github.com/user-attachments/assets/7696a4c0-6162-47fa-9c2f-4d014e712c99" />
-
-Recomended: foot
+# Usage pt2
+Recomended: foot (sixel)
 ```
-foot -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_sixel.sh'
+foot -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard.sh'
 ```
 or using footserver
 ```
 footserver &
-footclient -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_sixel.sh'
+footclient -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard.sh'
 ```
+<img width="480" height="270" alt="ScreenShot-2026-07-12_21-45-16" src="https://github.com/user-attachments/assets/32067a48-db3a-4e43-952a-233cc83f9bb4" />
 
 
-# Image protocol: kitty
-
-<img width="480" height="270" alt="ScreenShot-2026-07-12_16-18-02" src="https://github.com/user-attachments/assets/d90f5ef3-54df-4240-b8af-09d313727906" />
-
-Recomended: kitty
+Recomended: kitty (kitty)
 ```
 kitty -1 --class tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_kitty.sh'
 ```
+<img width="480" height="270" alt="ScreenShot-2026-07-12_21-44-44" src="https://github.com/user-attachments/assets/4c088de8-a5ce-43d9-99e0-33c64d7395bc" />
 
 
-# Image protocol: none
-
-<img width="480" height="270" alt="ScreenShot-2026-07-12_16-18-28" src="https://github.com/user-attachments/assets/52bb3b01-94fb-40a4-b5ca-f7f94974875a" />
-
-Not recomended (for example: alacritty)
+Not recomended: terminals without image support, for example alacritty. Image will render as ASCII art
 ```
-alacritty --class tui-clipboard -e bash -c '~/tui-clipboard/tui_clipboard_noimage.sh'
+alacritty --class tui-clipboard -e bash -c '~/tui-clipboard/tui_clipboard.sh'
 ```
+<img width="480" height="270" alt="ScreenShot-2026-07-12_21-43-07" src="https://github.com/user-attachments/assets/87217b66-648a-49f4-9c9a-d660490f54ed" />
+
