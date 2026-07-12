@@ -34,7 +34,6 @@ cd tui-clipboard
 make install
 ```
 **!!! Make sure you have PATH in your shellrc file!**
-
 **Add**
 ```
 export PATH="$HOME/.local/bin:$PATH"
@@ -60,7 +59,7 @@ or just run the script
 
 # Private Mode
 
-*In private mode text that you copy is NOT saving in cliphist. So you can copy passwords to example. See here https://github.com/rywby-dot/tui-clipboard/blob/main/private-mode/README_PrivateMode.md*
+*In private mode text that you copy is NOT saving in cliphist. So you can copy passwords for example. See here https://github.com/rywby-dot/tui-clipboard/blob/main/private-mode/README_PrivateMode.md*
 
 
 # Usage pt2

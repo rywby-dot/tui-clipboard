@@ -2,7 +2,12 @@
 
  **! This is not necessarily function. You can NOT use it**
 
-*In private mode text that you copy is NOT saving in cliphist. So you can copy passwords to example*
+*In private mode text that you copy is NOT saving in cliphist. So you can copy passwords for example*
+
+```
+chmod +x private-mode/clipboard_script.sh
+chmod +x private-mode/clipboard_switcher.sh
+```
 
 # Usage:
 
