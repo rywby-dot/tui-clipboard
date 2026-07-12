@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cliphist list | fzf --no-sort --delimiter '\t' --with-nth 2.. \
+cliphist list | fzf --no-sort --no-info --delimiter '\t' --with-nth 2.. \
   --preview '
     tmp=$(mktemp)
     echo {} | cliphist decode > "$tmp"
