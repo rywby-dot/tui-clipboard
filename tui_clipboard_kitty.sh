@@ -26,7 +26,7 @@ cliphist list | fzf --no-sort --delimiter '\t' --with-nth 2.. \
 
     rm -f "$tmp"
   ' \
-  --preview-window=right:55% \
+  --preview-window=right:50% \
   --bind 'enter:execute-silent(echo {} | cliphist decode | wl-copy)+abort'
 
 echo -en "\033_Ga=d,d=I,i=${KITTY_CLIP_IMAGE_ID},q=2\033\\" \

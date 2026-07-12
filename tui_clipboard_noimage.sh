@@ -10,5 +10,5 @@ cliphist list | fzf --no-sort --delimiter '\t' --with-nth 2.. \
     fi
     rm -f "$tmp"
   ' \
-  --preview-window=right:55% \
+  --preview-window=right:50% \
   --bind 'enter:execute(echo {} | cliphist decode | wl-copy)+abort'
