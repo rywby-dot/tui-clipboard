@@ -1,6 +1,6 @@
 # Fast and simple clipboard manager in terminal
 
-<img width="960" height="540" alt="ScreenShot-2026-07-12_09-20-56" src="https://github.com/user-attachments/assets/4f0ce22d-f51a-422d-aacc-8aae9722e5df" />
+<img width="960" height="540" alt="ScreenShot-2026-07-12_16-17-28" src="https://github.com/user-attachments/assets/2d3701df-cffd-4292-a81f-73178f8fdd44" />
 
 # Dependences
 ```
@@ -49,7 +49,7 @@ just run the script
 
 # Image protocol: Sixel
 
-<img width="480" height="270" alt="ScreenShot-2026-07-12_09-21-13" src="https://github.com/user-attachments/assets/668525f2-e69b-49ff-b360-77c38bd74302" />
+<img width="480" height="270" alt="ScreenShot-2026-07-12_16-17-16" src="https://github.com/user-attachments/assets/7696a4c0-6162-47fa-9c2f-4d014e712c99" />
 
 Recomended: foot
 ```
@@ -64,17 +64,17 @@ footclient -a tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_sixel.sh'
 
 # Image protocol: kitty
 
-<img width="480" height="270" alt="ScreenShot-2026-07-12_09-26-18" src="https://github.com/user-attachments/assets/7cfc0cba-1e31-46bd-b37a-4c5a5745d693" />
+<img width="480" height="270" alt="ScreenShot-2026-07-12_16-18-02" src="https://github.com/user-attachments/assets/d90f5ef3-54df-4240-b8af-09d313727906" />
 
 Recomended: kitty
 ```
-kitty -1 --class tui-clipboard zsh -c '~/tui-clipboard/tui_clipboard_kitty.sh'
+kitty -1 --class tui-clipboard bash -c '~/tui-clipboard/tui_clipboard_kitty.sh'
 ```
 
 
 # Image protocol: none
 
-<img width="480" height="270" alt="ScreenShot-2026-07-12_09-22-59" src="https://github.com/user-attachments/assets/c2f55598-110f-423c-b69d-11ab1ce23102" />
+<img width="480" height="270" alt="ScreenShot-2026-07-12_16-18-28" src="https://github.com/user-attachments/assets/52bb3b01-94fb-40a4-b5ca-f7f94974875a" />
 
 Not recomended (for example: alacritty)
 ```
