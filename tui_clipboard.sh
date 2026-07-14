@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 umask 077
-cliphist list | fzf \
+cliphist list | sed -E 's/\[\[ binary data [^]]* ([0-9]+x[0-9]+) \]\]$/ Image \1/' | fzf \
     --exact \
     --no-sort \
     --no-info \
@@ -12,7 +12,7 @@ cliphist list | fzf \
     --preview-window='right:50%' \
     --bind 'right-click:execute(printf "%s" {1} | cliphist decode | wl-copy)+abort' \
     --bind 'enter:execute(printf "%s" {1} | cliphist decode | wl-copy)+abort' \
-    --bind 'ctrl-d:execute(printf "%s" {1} | cliphist delete)+reload(cliphist list)' \
+    --bind 'ctrl-d:execute(printf "%s" {1} | cliphist delete)+reload(cliphist list | sed -E '\''s/\[\[ binary data [^]]* ([0-9]+x[0-9]+) \]\]$/ Image \1/'\'')' \
     --preview '
       tmp=$(mktemp) || exit
 
