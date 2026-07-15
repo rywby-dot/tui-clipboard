@@ -74,7 +74,8 @@ image/*)
 chafa -s "${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}" -- "$tmp"
 ;;
 *)
-bat --color=always --style=plain --paging=never -- "$tmp"
+bat --color=always --style=plain --paging=never \
+    --wrap=character --terminal-width="$FZF_PREVIEW_COLUMNS" -- "$tmp"
 ;;
 esac
 ' \
