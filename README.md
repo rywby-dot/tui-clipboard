@@ -1,8 +1,29 @@
 # Fast and simple clipboard manager in terminal
 
-<img width="960" height="540" alt="ScreenShot-2026-07-12_21-36-19" src="https://github.com/user-attachments/assets/bd4fd718-bd02-4b0e-9428-77ed01696911" />
+<img width="640" height="360" alt="ScreenShot-2026-07-21_20-13-56" src="https://github.com/user-attachments/assets/51b493d3-0eaf-4d4b-a6d9-5e40bf41a9a7" />
+<img width="640" height="360" alt="ScreenShot-2026-07-21_20-14-18" src="https://github.com/user-attachments/assets/7e454f75-5299-4876-ae9f-d7ade8434c5a" />
 
-Works with every terminal. Shows pictures using chafa in Kitty, Sixel, ASCII, iTerm2, etc.
+
+**Two lists:**
+```
+On the left       |  On the right
+is the cliphist   |  is additional information.
+history itself    |  Images, long text
+```
+Both lists can be scrolled. The left one is `searchable` (just start typing).
+
+Works with every terminal. Shows pictures using chafa in **Kitty, Sixel, ASCII, iTerm2**, etc. Has syntax highlighting.
+
+**Editor** - Press ctrl+a to open the editor where you can edit the text to be saved.
+
+https://github.com/user-attachments/assets/e0b963c7-7ce4-40b5-badc-1e3d016c5d69
+
+Make sure you add EDITOR to your ~/.zshsc, ~/.bashrc, etc
+```
+export EDITOR="nvim"
+export VISUAL="nvim"
+```
+In the left list, ` Image 1920x1080` is highlighted in pink, and `links` are highlighted in blue.
 
 This script works on Wayland. To save clipboard contents to `cliphist`, add these commands to your Wayland compositor's autostart configuration:
 
@@ -54,46 +75,22 @@ Uninstall:
 make uninstall
 ```
 
-or just download the file and use it like a script
+*or just download the file and use it like a script*
 
 
 # Usage
 ```
 tuicl
 ```
-or just run the script
+*or just run the script:*
 ```
 ./tui_clipboard.sh
 ```
+Press `ctrl+h` to open `help menu`
+
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/3809a3be-8a86-469b-8b89-09a448019372" />
+
 
 # Private Mode
 
 *In private mode, copied text is not saved to cliphist. This can be useful when copying passwords, for example. See [README_PrivateMode.md](private-mode/README_PrivateMode.md).*
-
-
-# Usage pt2
-
-Recommended: foot (Sixel)
-```
-foot -a tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
-```
-or using footserver
-```
-footserver &
-footclient -a tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
-```
-<img width="480" height="270" alt="ScreenShot-2026-07-12_21-45-16" src="https://github.com/user-attachments/assets/32067a48-db3a-4e43-952a-233cc83f9bb4" />
-
-
-Recommended: Kitty (Kitty)
-```
-kitty -1 --class tui-clipboard bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
-```
-<img width="480" height="270" alt="ScreenShot-2026-07-12_21-44-44" src="https://github.com/user-attachments/assets/4c088de8-a5ce-43d9-99e0-33c64d7395bc" />
-
-
-Not recommended: terminals without image support, for example Alacritty. Images will render as ASCII art.
-```
-alacritty --class tui-clipboard -e bash -c '/path/to/tui-clipboard/tui_clipboard.sh'
-```
-<img width="480" height="270" alt="ScreenShot-2026-07-12_21-43-07" src="https://github.com/user-attachments/assets/87217b66-648a-49f4-9c9a-d660490f54ed" />
